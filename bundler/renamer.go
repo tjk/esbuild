@@ -6,8 +6,8 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"github.com/evanw/esbuild/internal/ast"
-	"github.com/evanw/esbuild/internal/lexer"
+	"esbuild/ast"
+	"esbuild/lexer"
 )
 
 func computeReservedNames(moduleScopes []*ast.Scope, symbols ast.SymbolMap) map[string]bool {

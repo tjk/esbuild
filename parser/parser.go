@@ -9,9 +9,9 @@ import (
 	"strings"
 	"unsafe"
 
-	"github.com/evanw/esbuild/internal/ast"
-	"github.com/evanw/esbuild/internal/lexer"
-	"github.com/evanw/esbuild/internal/logging"
+	"esbuild/ast"
+	"esbuild/lexer"
+	"esbuild/logging"
 )
 
 // This parser does two passes:

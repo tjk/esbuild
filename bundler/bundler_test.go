@@ -6,11 +6,12 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/evanw/esbuild/internal/fs"
-	"github.com/evanw/esbuild/internal/logging"
-	"github.com/evanw/esbuild/internal/parser"
-	"github.com/evanw/esbuild/internal/printer"
-	"github.com/evanw/esbuild/internal/resolver"
+	"esbuild/fs"
+	"esbuild/logging"
+	"esbuild/parser"
+	"esbuild/printer"
+	"esbuild/resolver"
+
 	"github.com/kylelemons/godebug/diff"
 )
 

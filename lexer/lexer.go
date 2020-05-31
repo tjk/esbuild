@@ -21,8 +21,8 @@ import (
 	"unicode/utf16"
 	"unicode/utf8"
 
-	"github.com/evanw/esbuild/internal/ast"
-	"github.com/evanw/esbuild/internal/logging"
+	"esbuild/ast"
+	"esbuild/logging"
 )
 
 type T uint

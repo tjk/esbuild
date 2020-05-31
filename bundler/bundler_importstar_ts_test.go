@@ -3,7 +3,7 @@ package bundler
 import (
 	"testing"
 
-	"github.com/evanw/esbuild/internal/parser"
+	"esbuild/parser"
 )
 
 func TestTSImportStarUnused(t *testing.T) {

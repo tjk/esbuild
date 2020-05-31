@@ -3,8 +3,8 @@ package printer
 import (
 	"testing"
 
-	"github.com/evanw/esbuild/internal/logging"
-	"github.com/evanw/esbuild/internal/parser"
+	"esbuild/logging"
+	"esbuild/parser"
 )
 
 func assertEqual(t *testing.T, a interface{}, b interface{}) {

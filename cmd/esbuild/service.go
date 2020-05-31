@@ -12,11 +12,11 @@ import (
 	"os"
 	"runtime/debug"
 
-	"github.com/evanw/esbuild/internal/bundler"
-	"github.com/evanw/esbuild/internal/fs"
-	"github.com/evanw/esbuild/internal/logging"
-	"github.com/evanw/esbuild/internal/printer"
-	"github.com/evanw/esbuild/internal/resolver"
+	"esbuild/bundler"
+	"esbuild/fs"
+	"esbuild/logging"
+	"esbuild/printer"
+	"esbuild/resolver"
 )
 
 type responseType = map[string][]byte

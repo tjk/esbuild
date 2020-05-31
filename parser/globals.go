@@ -4,7 +4,7 @@ import (
 	"math"
 	"strings"
 
-	"github.com/evanw/esbuild/internal/ast"
+	"esbuild/ast"
 )
 
 var processedGlobals *ProcessedDefines

@@ -10,7 +10,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/evanw/esbuild/internal/ast"
+	"esbuild/ast"
 )
 
 type Log struct {
