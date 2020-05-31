@@ -1,4 +1,4 @@
-module esbuild
+module github.com/tjk/esbuild
 
 go 1.13
 
