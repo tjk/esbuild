@@ -33,7 +33,7 @@ type file struct {
 	//
 	// This is used by the printer to write out the source index for modules that
 	// are referenced in the AST.
-	resolvedImports map[string]uint32
+	ResolvedImports map[string]uint32
 
 	// If this file ends up being used in the bundle, this is an additional file
 	// that must be written to the output directory. It's used by the "file"
@@ -45,14 +45,14 @@ func (f *file) resolveImport(path ast.Path) (uint32, bool) {
 	if path.UseSourceIndex {
 		return path.SourceIndex, true
 	}
-	sourceIndex, ok := f.resolvedImports[path.Text]
+	sourceIndex, ok := f.ResolvedImports[path.Text]
 	return sourceIndex, ok
 }
 
 type Bundle struct {
 	fs          fs.FS
-	sources     []logging.Source
-	files       []file
+	Sources     []logging.Source
+	Files       []file
 	entryPoints []uint32
 }
 
@@ -439,7 +439,7 @@ func (b *Bundle) Compile(log logging.Log, options BundleOptions) []OutputFile {
 	for i, entryPoint := range b.entryPoints {
 		waitGroup.Add(1)
 		go func(i int, entryPoint uint32) {
-			c := newLinkerContext(&options, log, b.fs, b.sources, b.files, []uint32{entryPoint})
+			c := newLinkerContext(&options, log, b.fs, b.Sources, b.Files, []uint32{entryPoint})
 			resultGroups[i] = c.link()
 			waitGroup.Done()
 		}(i, entryPoint)

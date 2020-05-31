@@ -1639,7 +1639,7 @@ func (c *linkerContext) generateCodeForFileInChunk(
 		Indent:            indent,
 		OutputFormat:      c.options.OutputFormat,
 		RemoveWhitespace:  c.options.RemoveWhitespace,
-		ResolvedImports:   file.resolvedImports,
+		ResolvedImports:   file.ResolvedImports,
 		ToModuleRef:       toModuleRef,
 		WrapperRefs:       wrapperRefs,
 		SourceMapContents: sourceMapContents,
