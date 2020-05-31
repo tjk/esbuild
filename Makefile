@@ -72,7 +72,9 @@ publish-npm: update-version-go test-all
 	make -j7 publish-windows publish-darwin publish-linux publish-linux-arm64 publish-linux-ppc64le publish-wasm publish-neutral
 	git commit -am "publish $(ESBUILD_VERSION) to npm"
 
-publish-git: update-version-go test-all
+publish-git: update-version-go test-all publish-git-raw
+
+publish-git-raw:
 	git tag "v$(ESBUILD_VERSION)"
 	git push origin master "v$(ESBUILD_VERSION)"
 
