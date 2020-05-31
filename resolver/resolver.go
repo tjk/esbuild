@@ -35,9 +35,10 @@ const (
 )
 
 type ResolveOptions struct {
-	ExtensionOrder  []string
-	Platform        Platform
-	ExternalModules map[string]bool
+	ExtensionOrder          []string
+	Platform                Platform
+	ExternalModules         map[string]bool
+	AllowAllExternalModules bool
 }
 
 type resolver struct {
@@ -112,6 +113,11 @@ func (r *resolver) resolveWithoutSymlinks(sourcePath string, importPath string) 
 			return "", ResolveMissing
 		}
 	} else {
+		// let runtime provide external modules, for example
+		if r.options.AllowAllExternalModules {
+			return "", ResolveExternal
+		}
+
 		// Check for external modules first
 		if r.options.ExternalModules != nil && r.options.ExternalModules[importPath] {
 			return "", ResolveExternal
