@@ -12,11 +12,11 @@ import (
 	"os"
 	"runtime/debug"
 
-	"esbuild/bundler"
-	"esbuild/fs"
-	"esbuild/logging"
-	"esbuild/printer"
-	"esbuild/resolver"
+	"github.com/tjk/esbuild/bundler"
+	"github.com/tjk/esbuild/fs"
+	"github.com/tjk/esbuild/logging"
+	"github.com/tjk/esbuild/printer"
+	"github.com/tjk/esbuild/resolver"
 )
 
 type responseType = map[string][]byte

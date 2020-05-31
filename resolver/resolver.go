@@ -5,11 +5,11 @@ import (
 	"strings"
 	"sync"
 
-	"esbuild/ast"
-	"esbuild/fs"
-	"esbuild/lexer"
-	"esbuild/logging"
-	"esbuild/parser"
+	"github.com/tjk/esbuild/ast"
+	"github.com/tjk/esbuild/fs"
+	"github.com/tjk/esbuild/lexer"
+	"github.com/tjk/esbuild/logging"
+	"github.com/tjk/esbuild/parser"
 )
 
 type ResolveStatus uint8

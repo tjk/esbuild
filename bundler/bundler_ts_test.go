@@ -3,7 +3,7 @@ package bundler
 import (
 	"testing"
 
-	"esbuild/parser"
+	"github.com/tjk/esbuild/parser"
 )
 
 func TestTSDeclareConst(t *testing.T) {

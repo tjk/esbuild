@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"testing"
 
-	"esbuild/ast"
-	"esbuild/logging"
-	"esbuild/printer"
+	"github.com/tjk/esbuild/ast"
+	"github.com/tjk/esbuild/logging"
+	"github.com/tjk/esbuild/printer"
 )
 
 func expectParseErrorJSON(t *testing.T, contents string, expected string) {

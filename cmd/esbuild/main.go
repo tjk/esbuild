@@ -11,14 +11,14 @@ import (
 	"strings"
 	"time"
 
-	"esbuild/ast"
-	"esbuild/bundler"
-	"esbuild/fs"
-	"esbuild/lexer"
-	"esbuild/logging"
-	"esbuild/parser"
-	"esbuild/printer"
-	"esbuild/resolver"
+	"github.com/tjk/esbuild/ast"
+	"github.com/tjk/esbuild/bundler"
+	"github.com/tjk/esbuild/fs"
+	"github.com/tjk/esbuild/lexer"
+	"github.com/tjk/esbuild/logging"
+	"github.com/tjk/esbuild/parser"
+	"github.com/tjk/esbuild/printer"
+	"github.com/tjk/esbuild/resolver"
 )
 
 const helpText = `

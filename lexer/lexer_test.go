@@ -7,7 +7,7 @@ import (
 	"testing"
 	"unicode/utf8"
 
-	"esbuild/logging"
+	"github.com/tjk/esbuild/logging"
 )
 
 func assertEqual(t *testing.T, a interface{}, b interface{}) {

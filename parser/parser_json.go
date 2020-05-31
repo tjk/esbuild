@@ -3,9 +3,9 @@ package parser
 import (
 	"fmt"
 
-	"esbuild/ast"
-	"esbuild/lexer"
-	"esbuild/logging"
+	"github.com/tjk/esbuild/ast"
+	"github.com/tjk/esbuild/lexer"
+	"github.com/tjk/esbuild/logging"
 )
 
 type jsonParser struct {

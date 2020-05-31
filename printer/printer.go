@@ -8,8 +8,8 @@ import (
 	"strings"
 	"unicode/utf8"
 
-	"esbuild/ast"
-	"esbuild/lexer"
+	"github.com/tjk/esbuild/ast"
+	"github.com/tjk/esbuild/lexer"
 )
 
 type Format uint8

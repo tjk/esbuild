@@ -3,8 +3,8 @@ package bundler
 import (
 	"testing"
 
-	"esbuild/parser"
-	"esbuild/printer"
+	"github.com/tjk/esbuild/parser"
+	"github.com/tjk/esbuild/printer"
 )
 
 func TestImportStarUnused(t *testing.T) {

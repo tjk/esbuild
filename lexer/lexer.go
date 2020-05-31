@@ -21,8 +21,8 @@ import (
 	"unicode/utf16"
 	"unicode/utf8"
 
-	"esbuild/ast"
-	"esbuild/logging"
+	"github.com/tjk/esbuild/ast"
+	"github.com/tjk/esbuild/logging"
 )
 
 type T uint

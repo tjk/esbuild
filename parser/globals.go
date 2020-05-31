@@ -4,7 +4,7 @@ import (
 	"math"
 	"strings"
 
-	"esbuild/ast"
+	"github.com/tjk/esbuild/ast"
 )
 
 var processedGlobals *ProcessedDefines
