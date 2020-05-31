@@ -66,9 +66,13 @@ platform-wasm:
 platform-neutral:
 	cd npm/esbuild && npm version "$(ESBUILD_VERSION)" --allow-same-version
 
-publish-all: update-version-go test-all
+publish-all: publish-npm publish-git
+
+publish-npm: update-version-go test-all
 	make -j7 publish-windows publish-darwin publish-linux publish-linux-arm64 publish-linux-ppc64le publish-wasm publish-neutral
 	git commit -am "publish $(ESBUILD_VERSION) to npm"
+
+publish-git: update-version-go test-all
 	git tag "v$(ESBUILD_VERSION)"
 	git push origin master "v$(ESBUILD_VERSION)"
 
