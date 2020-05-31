@@ -1,6 +1,6 @@
 ESBUILD_VERSION = $(shell cat version.txt)
 
-esbuild: cmd/esbuild/*.go internal/*/*.go
+esbuild: cmd/esbuild/*.go */*.go
 	go build ./cmd/esbuild
 
 # These tests are for development
@@ -15,7 +15,7 @@ test-go:
 	go test ./...
 
 test-wasm:
-	PATH="$(shell go env GOROOT)/misc/wasm:$$PATH" GOOS=js GOARCH=wasm go test ./internal/...
+	PATH="$(shell go env GOROOT)/misc/wasm:$$PATH" GOOS=js GOARCH=wasm go test ./...
 
 verify-source-map: | scripts/node_modules
 	node scripts/verify-source-map.js
@@ -106,7 +106,7 @@ clean:
 	rm -rf npm/esbuild-linux-ppc64le/bin
 	rm -f npm/esbuild-wasm/esbuild.wasm npm/esbuild-wasm/wasm_exec.js
 	rm -rf npm/esbuild-wasm/lib
-	go clean -testcache ./internal/...
+	go clean -testcache ./...
 
 node_modules:
 	npm ci
